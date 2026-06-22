@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rupesh Shinde — Enterprise Healthcare AI & Digital Transformation Leader. 18+ years across regulated pharma, enterprise CTMS, GxP-compliant platforms and AI-enabled workflow automation at Novartis. Founder of TinyAngle Studio. Pune, India." />
+  <meta name="author" content="Rupesh Shinde" />
+  <title>Rupesh Shinde — Enterprise Healthcare AI &amp; Digital Transformation Leader</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>(function(){try{var t=localStorage.getItem('tas-theme');if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       PORTFOLIO PAGE — scroll-driven story, cinematic chapters.
+       All section styles are prefixed .pf- to avoid collisions with
+       the shared design system in css/style.css.
+
+       Each chapter's AI-generated background lives in ONE variable
+       below. To self-host: download the image into Images/portfolio/
+       and replace the url() with e.g. url('Images/portfolio/hero.png').
+       The layered gradient under it is the fallback if the URL is
+       ever unreachable, so the page always looks intentional.
+       ═══════════════════════════════════════════════════════════ */
+    :root {
+      --pf-cdn: 'https://d8j0ntlcm91z4.cloudfront.net/user_3EyYzV87YlpEXxNMdaixj56fQwG';
+      --pf-img-hero:      url('https://d8j0ntlcm91z4.cloudfront.net/user_3EyYzV87YlpEXxNMdaixj56fQwG/hf_20260617_204755_d2af25d7-4ce4-4f32-9985-923d0ec4dbfb.png');
+      --pf-img-journey:   url('https://d8j0ntlcm91z4.cloudfront.net/user_3EyYzV87YlpEXxNMdaixj56fQwG/hf_20260617_204759_9c274a5f-4f97-4df7-9269-649c1dedfb28.png');
+      --pf-img-cognizant: url('https://d8j0ntlcm91z4.cloudfront.net/user_3EyYzV87YlpEXxNMdaixj56fQwG/hf_20260617_204800_d3836fbd-578d-42eb-8786-b7c8a6155bee.png');
+      --pf-img-novartis:  url('https://d8j0ntlcm91z4.cloudfront.net/user_3EyYzV87YlpEXxNMdaixj56fQwG/hf_20260617_204802_f762a922-d99e-49f6-8f41-e36ff696c7aa.jpeg');
+      --pf-img-tinyangle: url('https://d8j0ntlcm91z4.cloudfront.net/user_3EyYzV87YlpEXxNMdaixj56fQwG/hf_20260617_204806_a4e2c0c9-caea-40b7-8a85-361f3fd6517a.png');
+      --pf-img-close:     url('https://d8j0ntlcm91z4.cloudfront.net/user_3EyYzV87YlpEXxNMdaixj56fQwG/hf_20260617_204808_cf4be0be-5604-4f2f-989f-12e2e161f159.png');
+    }
+
+    .pf-main { position: relative; z-index: 1; overflow-x: clip; }
+
+    /* ── Scroll progress bar (top) ─────────────────────────────── */
+    .pf-progress {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, #22d3ee, var(--blue), #22d3a5);
+      z-index: 1200; box-shadow: 0 0 14px rgba(99,102,241,.7);
+      transition: width .08s linear;
+    }
+
+    /* ── Generic cinematic section frame ───────────────────────── */
+    .pf-cine { position: relative; overflow: hidden; isolation: isolate; }
+    .pf-bg {
+      position: absolute; inset: -22% 0 -22% 0;       /* taller than section so parallax never reveals an edge */
+      background-size: cover; background-position: center;
+      background-repeat: no-repeat;
+      will-change: transform; z-index: -2;
+      transform: translate3d(0,0,0);
+    }
+    .pf-bg-tint {
+      position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(120% 90% at 50% 0%, transparent 0%, rgba(5,8,15,.45) 70%, var(--bg) 100%),
+        linear-gradient(180deg, rgba(5,8,15,.55) 0%, rgba(5,8,15,.30) 40%, rgba(5,8,15,.78) 100%);
+    }
+    :root[data-theme="light"] .pf-bg-tint {
+      background:
+        radial-gradient(120% 90% at 50% 0%, rgba(247,248,252,.28) 0%, rgba(247,248,252,.62) 72%, var(--bg) 100%),
+        linear-gradient(180deg, rgba(247,248,252,.58) 0%, rgba(247,248,252,.44) 45%, rgba(247,248,252,.86) 100%);
+    }
+    /* Keep the cinematic images clearly visible in light mode while preserving
+       enough scrim under headings for legible dark text. */
+    :root[data-theme="light"] .pf-bg { opacity: .82; }
+
+    /* ═══ HERO ════════════════════════════════════════════════ */
+    .pf-hero {
+      min-height: 100vh; min-height: 100svh;
+      display: flex; align-items: center;
+      padding: 120px 7vw 90px;
+      background: radial-gradient(120% 120% at 70% 80%, rgba(99,102,241,.16), transparent 55%), var(--bg);
+    }
+    .pf-hero .pf-bg { background-image: var(--pf-img-hero); }
+    .pf-hero-grid {
+      width: 100%; max-width: 1240px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.05fr .8fr; gap: 5%;
+      align-items: center;
+    }
+    .pf-hero-inner { max-width: 640px; position: relative; }
+
+    /* ── Founder portrait ─────────────────────────────────────── */
+    .pf-portrait { position: relative; justify-self: center; width: 100%; max-width: 400px; }
+    .pf-portrait-frame {
+      position: relative; border-radius: 26px; padding: 7px;
+      background: linear-gradient(150deg, rgba(99,102,241,.55), rgba(34,211,238,.35) 45%, rgba(34,211,165,.5));
+      box-shadow: 0 40px 90px rgba(0,0,0,.55), 0 0 60px rgba(99,102,241,.25);
+      animation: pf-float 7s ease-in-out infinite;
+    }
+    .pf-portrait-frame::before {
+      content: ''; position: absolute; inset: -22px; z-index: -1; border-radius: 40px;
+      background: radial-gradient(60% 60% at 50% 40%, rgba(99,102,241,.45), transparent 70%);
+      filter: blur(28px); animation: pf-aura 6s ease-in-out infinite;
+    }
+    .pf-portrait-frame img {
+      display: block; width: 100%; aspect-ratio: 1122 / 1402; object-fit: cover;
+      border-radius: 20px; background: var(--s2);
+    }
+    @keyframes pf-float { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-12px); } }
+    @keyframes pf-aura  { 0%,100%{ opacity:.7; } 50%{ opacity:1; } }
+    .pf-portrait-badge {
+      position: absolute; left: 50%; bottom: -22px; transform: translateX(-50%);
+      display: inline-flex; align-items: center; gap: 10px; white-space: nowrap;
+      padding: 11px 18px; border-radius: 999px;
+      background: rgba(8,13,26,.92); backdrop-filter: blur(10px);
+      border: 1px solid var(--bdrb); box-shadow: 0 14px 34px rgba(0,0,0,.5);
+    }
+    :root[data-theme="light"] .pf-portrait-badge { background: rgba(255,255,255,.95); }
+    .pf-portrait-badge-dot {
+      width: 9px; height: 9px; border-radius: 50%; background: var(--green); flex-shrink: 0;
+      box-shadow: 0 0 0 4px rgba(34,211,165,.18); animation: pf-pulse 2.4s ease-in-out infinite;
+    }
+    .pf-portrait-badge-txt { display: flex; flex-direction: column; line-height: 1.25; font-size: 11.5px; color: var(--muted); }
+    .pf-portrait-badge-txt strong { font-size: 13.5px; color: var(--text); font-weight: 700; }
+    .pf-eyebrow {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase;
+      font-weight: 600; color: var(--blp);
+      padding: 8px 15px; border-radius: 999px;
+      border: 1px solid var(--bdrb); background: rgba(99,102,241,.08);
+      margin-bottom: 26px;
+    }
+    .pf-eyebrow .pf-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--green);
+      box-shadow: 0 0 0 4px rgba(34,211,165,.18); animation: pf-pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pf-pulse { 0%,100%{opacity:1} 50%{opacity:.45} }
+
+    .pf-hero h1 {
+      font-size: clamp(40px, 7.5vw, 86px); line-height: .98;
+      font-weight: 800; letter-spacing: -.03em; color: var(--text);
+      margin-bottom: 18px;
+    }
+    .pf-hero h1 .gr {
+      background: linear-gradient(115deg, #818cf8 0%, #22d3ee 50%, #22d3a5 100%);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .pf-role {
+      font-size: clamp(18px, 2.6vw, 26px); font-weight: 600;
+      color: var(--slt-h); margin-bottom: 20px; letter-spacing: -.01em;
+    }
+    .pf-lead {
+      font-size: clamp(16px, 2vw, 19px); line-height: 1.65; color: var(--muted);
+      max-width: 640px; margin-bottom: 36px;
+    }
+    .pf-lead strong { color: var(--text); font-weight: 600; }
+    .pf-hero-actions { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .pf-meta-row {
+      display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 34px;
+      font-size: 13.5px; color: var(--muted);
+    }
+    .pf-meta-row span { display: inline-flex; align-items: center; gap: 8px; }
+    .pf-meta-row svg { width: 15px; height: 15px; color: var(--blt); flex-shrink: 0; }
+
+    .pf-scrollcue {
+      position: absolute; left: 0; bottom: -54px;
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--mut2); font-weight: 600;
+    }
+    .pf-scrollcue .pf-mouse {
+      width: 22px; height: 34px; border: 2px solid var(--mut2); border-radius: 12px;
+      position: relative;
+    }
+    .pf-scrollcue .pf-mouse::before {
+      content: ''; position: absolute; left: 50%; top: 6px; width: 3px; height: 6px;
+      border-radius: 2px; background: var(--blt); transform: translateX(-50%);
+      animation: pf-wheel 1.7s ease-in-out infinite;
+    }
+    @keyframes pf-wheel { 0%{opacity:0;transform:translate(-50%,0)} 30%{opacity:1} 60%{opacity:1;transform:translate(-50%,9px)} 100%{opacity:0;transform:translate(-50%,9px)} }
+
+    /* ═══ STATS MARQUEE — numbers scroll right→left, pause on hover ═══ */
+    .pf-stats {
+      position: relative; z-index: 2;
+      max-width: 1240px; margin: -1px auto 0; padding: 30px 0 36px;
+      overflow: hidden;
+    }
+    /* Edge fades (overlay pseudo-elements, not mask-image — keeps the
+       animation alive on iOS Safari). */
+    .pf-stats::before, .pf-stats::after {
+      content: ''; position: absolute; top: 0; bottom: 0; width: 84px; z-index: 2; pointer-events: none;
+    }
+    .pf-stats::before { left: 0;  background: linear-gradient(to right, var(--bg), transparent); }
+    .pf-stats::after  { right: 0; background: linear-gradient(to left,  var(--bg), transparent); }
+    /* The conveyor: a duplicated set sliding steadily right → left and looping. */
+    .pf-stats-track {
+      display: flex; align-items: flex-start; width: max-content;
+      animation: pf-stats-scroll 34s linear infinite;
+    }
+    @keyframes pf-stats-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .pf-stats:hover .pf-stats-track { animation-play-state: paused; }
+    .pf-stat {
+      flex: 0 0 auto; position: relative; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: 9px;
+      padding: 0 clamp(30px, 5vw, 66px);
+    }
+    /* Hairline divider between consecutive numbers. */
+    .pf-stat:not(:first-child)::before {
+      content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+      width: 1px; height: 48px; background: var(--bdr);
+    }
+    .pf-stat .pf-num {
+      font-size: clamp(40px, 6vw, 66px); font-weight: 800; letter-spacing: -.03em;
+      line-height: .9; font-variant-numeric: tabular-nums; white-space: nowrap;
+      background: linear-gradient(120deg, #818cf8, #22d3ee);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .pf-stat .pf-num .pf-suf { font-size: .55em; }
+    /* Reserve two lines so every label block is the same height — keeps the
+       numbers on one line and the dividers vertically centered regardless of
+       how long a given label is. */
+    .pf-stat .pf-lbl { font-size: 12.5px; font-weight: 600; letter-spacing: .03em; color: var(--muted); line-height: 1.35; max-width: 170px; min-height: 2.7em; }
+
+    /* ═══ SECTION SHARED ──────────────────────────────────────── */
+    .pf-sec-head { max-width: 760px; margin: 0 auto 50px; text-align: center; }
+    .pf-sec-eye {
+      font-size: 12px; letter-spacing: .16em; text-transform: uppercase;
+      font-weight: 700; color: var(--blt); margin-bottom: 14px;
+    }
+    .pf-sec-title {
+      font-size: clamp(28px, 4.4vw, 46px); font-weight: 800; letter-spacing: -.02em;
+      line-height: 1.08; color: var(--text);
+    }
+    .pf-sec-title .gr {
+      background: linear-gradient(120deg, #818cf8, #22d3ee, #22d3a5);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .pf-sec-sub { margin-top: 16px; font-size: 16px; line-height: 1.6; color: var(--muted); }
+
+    /* ═══ JOURNEY MAP ─────────────────────────────────────────── */
+    .pf-journey { padding: 120px 5vw; }
+    .pf-journey .pf-bg { background-image: var(--pf-img-journey); opacity: .9; }
+    /* In light theme the world-map image was washing out under the light tint.
+       Show it clearly: keep the image strong and lighten the journey scrim. */
+    :root[data-theme="light"] .pf-journey .pf-bg { opacity: .95; }
+    :root[data-theme="light"] .pf-journey .pf-bg-tint {
+      background:
+        radial-gradient(120% 90% at 50% 0%, rgba(247,248,252,.10), rgba(247,248,252,.34) 72%, var(--bg) 100%),
+        linear-gradient(180deg, rgba(247,248,252,.34) 0%, rgba(247,248,252,.22) 45%, rgba(247,248,252,.70) 100%);
+    }
+    /* animated, theme-aware glow layered over the map for depth + motion */
+    .pf-journey-glow {
+      position: absolute; inset: -20%; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(closest-side at 16% 28%, rgba(99,102,241,.26), transparent 70%),
+        radial-gradient(closest-side at 84% 72%, rgba(34,211,238,.20), transparent 70%);
+      background-repeat: no-repeat; background-size: 55% 55%, 55% 55%;
+      animation: pfDrift 20s ease-in-out infinite alternate;
+    }
+    :root[data-theme="light"] .pf-journey-glow {
+      background:
+        radial-gradient(closest-side at 16% 24%, rgba(99,102,241,.20), transparent 70%),
+        radial-gradient(closest-side at 86% 74%, rgba(6,182,212,.16), transparent 70%);
+      background-repeat: no-repeat; background-size: 55% 55%, 55% 55%;
+    }
+    .pf-route {
+      position: relative; max-width: 1040px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
+    }
+    .pf-route::before {
+      content: ''; position: absolute; left: 6%; right: 6%; top: 30px; height: 2px;
+      background: linear-gradient(90deg, #22d3ee, var(--blue), #22d3a5);
+      transform: scaleX(0); transform-origin: left; opacity: .55;
+      transition: transform 1.3s cubic-bezier(.6,.05,.3,1);
+    }
+    .pf-route.vis::before { transform: scaleX(1); }
+    /* glowing pulse that flows left → right along the journey line */
+    .pf-route::after {
+      content: ''; position: absolute; top: 28px; left: 6%; width: 130px; height: 6px;
+      border-radius: 6px; opacity: 0; pointer-events: none;
+      background: linear-gradient(90deg, transparent, #22d3ee, var(--blt), transparent);
+      box-shadow: 0 0 16px 2px rgba(34,211,238,.55);
+    }
+    .pf-route.vis::after { animation: pfFlowRight 3.8s linear .8s infinite; }
+    @keyframes pfFlowRight {
+      0%   { left: 4%;  opacity: 0; }
+      12%  { opacity: 1; }
+      88%  { opacity: 1; }
+      100% { left: 90%; opacity: 0; }
+    }
+    .pf-node { position: relative; text-align: center; padding-top: 0; }
+    .pf-node-dot {
+      width: 60px; height: 60px; margin: 0 auto 16px; border-radius: 50%;
+      display: grid; place-items: center;
+      background: rgba(8,17,42,.9); border: 1.5px solid var(--bdrb);
+      color: var(--blt); position: relative; z-index: 1;
+      box-shadow: 0 0 0 6px rgba(5,8,15,.6), 0 10px 30px rgba(99,102,241,.25);
+    }
+    :root[data-theme="light"] .pf-node-dot { background: #fff; box-shadow: 0 0 0 6px rgba(247,248,252,.85), 0 10px 24px rgba(99,102,241,.20); }
+    .pf-node-dot svg { width: 24px; height: 24px; }
+    .pf-node-yr { font-size: 12px; font-weight: 700; letter-spacing: .1em; color: var(--blt); text-transform: uppercase; }
+    .pf-node-place { font-size: 16px; font-weight: 700; color: var(--text); margin-top: 4px; }
+    .pf-node-role { font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+    /* ═══ CHAPTERS ────────────────────────────────────────────── */
+    .pf-chapter {
+      min-height: 96vh; display: flex; align-items: center;
+      padding: 130px 7vw;
+    }
+    .pf-chapter.right { justify-content: flex-end; }
+    .pf-chapter--novartis  { background: radial-gradient(110% 120% at 80% 50%, rgba(99,102,241,.18), transparent 60%), var(--bg); }
+    .pf-chapter--novartis .pf-bg  { background-image: var(--pf-img-novartis); }
+    .pf-chapter--cognizant { background: radial-gradient(110% 120% at 20% 50%, rgba(79,70,229,.16), transparent 60%), var(--bg); }
+    .pf-chapter--cognizant .pf-bg { background-image: var(--pf-img-cognizant); }
+    .pf-chapter--tinyangle { background: radial-gradient(110% 120% at 75% 60%, rgba(34,211,165,.16), transparent 60%), var(--bg); }
+    .pf-chapter--tinyangle .pf-bg { background-image: var(--pf-img-tinyangle); }
+
+    .pf-card {
+      max-width: 620px; padding: 40px 38px;
+      background: rgba(8,13,26,.72); backdrop-filter: blur(16px);
+      border: 1px solid var(--bdr); border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    :root[data-theme="light"] .pf-card { background: rgba(255,255,255,.82); }
+    .pf-card-eye {
+      display: inline-block; font-size: 12px; letter-spacing: .12em; text-transform: uppercase;
+      font-weight: 700; color: var(--blt); margin-bottom: 14px;
+      padding: 5px 12px; border-radius: 999px; border: 1px solid var(--bdrb); background: rgba(99,102,241,.08);
+    }
+    .pf-card h2 {
+      font-size: clamp(26px, 3.6vw, 40px); font-weight: 800; letter-spacing: -.02em;
+      line-height: 1.06; color: var(--text); margin-bottom: 8px;
+    }
+    .pf-card h2 .gr {
+      background: linear-gradient(120deg, #818cf8, #22d3ee, #22d3a5);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .pf-card-meta { font-size: 13.5px; color: var(--blp); font-weight: 600; margin-bottom: 20px; letter-spacing: .01em; }
+    .pf-list { list-style: none; display: flex; flex-direction: column; gap: 13px; margin-top: 6px; }
+    .pf-list li { display: flex; gap: 12px; font-size: 14.5px; line-height: 1.55; color: var(--muted); }
+    .pf-list li strong { color: var(--text); font-weight: 600; }
+    .pf-list li svg { width: 17px; height: 17px; color: var(--green); flex-shrink: 0; margin-top: 2px; }
+    .pf-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .pf-chip {
+      font-size: 12px; font-weight: 600; color: var(--blp);
+      padding: 6px 12px; border-radius: 999px;
+      background: rgba(99,102,241,.10); border: 1px solid var(--bdrb);
+    }
+
+    /* ═══ PROFESSIONAL EXPERIENCE (connected timeline) ─────────── */
+    .pf-xp { position: relative; padding: 120px 6vw; overflow: hidden; isolation: isolate; }
+    /* animated, theme-aware backdrop — large drifting colour blobs */
+    .pf-xp-anim {
+      position: absolute; inset: -25%; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(closest-side at 22% 32%, rgba(99,102,241,.34), transparent 70%),
+        radial-gradient(closest-side at 82% 30%, rgba(34,211,238,.26), transparent 70%),
+        radial-gradient(closest-side at 58% 90%, rgba(34,211,165,.24), transparent 70%);
+      background-repeat: no-repeat;
+      background-size: 58% 58%, 52% 52%, 60% 60%;
+      animation: pfDrift 17s ease-in-out infinite alternate;
+    }
+    :root[data-theme="light"] .pf-xp-anim {
+      background:
+        radial-gradient(closest-side at 22% 32%, rgba(99,102,241,.24), transparent 70%),
+        radial-gradient(closest-side at 82% 30%, rgba(6,182,212,.20), transparent 70%),
+        radial-gradient(closest-side at 58% 90%, rgba(16,185,129,.18), transparent 70%);
+      background-repeat: no-repeat;
+      background-size: 58% 58%, 52% 52%, 60% 60%;
+    }
+    @keyframes pfDrift {
+      0%   { background-position: 8% 18%, 88% 22%, 46% 96%; transform: translate3d(0,0,0) scale(1); }
+      50%  { background-position: 26% 36%, 68% 46%, 62% 78%; }
+      100% { background-position: 4% 8%, 94% 30%, 36% 92%; transform: translate3d(0,-2%,0) scale(1.05); }
+    }
+
+    .pf-xp-flow { position: relative; max-width: 1080px; margin: 0 auto; padding-left: 58px; }
+    /* base spine connecting the tiles */
+    .pf-xp-flow::before {
+      content: ''; position: absolute; left: 22px; top: 6px; bottom: 6px; width: 2px; border-radius: 2px;
+      background: linear-gradient(180deg, transparent, rgba(var(--ov),.13) 7%, rgba(var(--ov),.13) 93%, transparent);
+    }
+    :root[data-theme="light"] .pf-xp-flow::before {
+      background: linear-gradient(180deg, transparent, rgba(99,102,241,.22) 7%, rgba(99,102,241,.22) 93%, transparent);
+    }
+    /* glowing pulse that flows down the spine, one tile to the next */
+    .pf-xp-flow::after {
+      content: ''; position: absolute; left: 19px; width: 8px; height: 150px; border-radius: 8px; pointer-events: none;
+      background: linear-gradient(180deg, transparent, var(--blt) 28%, #22d3ee 52%, var(--green) 76%, transparent);
+      box-shadow: 0 0 18px 3px rgba(34,211,238,.5);
+      animation: pfFlowDown 4.2s linear infinite;
+    }
+    @keyframes pfFlowDown {
+      0%   { top: -160px; opacity: 0; }
+      12%  { opacity: 1; }
+      88%  { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+
+    .pf-xp-tile { position: relative; margin-bottom: 28px; }
+    .pf-xp-tile:last-child { margin-bottom: 0; }
+    .pf-xp-tile .pf-card { max-width: none; width: 100%; transition: transform .25s, border-color .25s, box-shadow .25s; }
+    .pf-xp-tile .pf-card:hover { transform: translateY(-4px); border-color: var(--bdrb); box-shadow: 0 22px 54px rgba(99,102,241,.20); }
+    /* node where the tile meets the spine */
+    .pf-xp-node {
+      position: absolute; left: -45px; top: 40px; width: 20px; height: 20px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--blt); z-index: 2;
+      box-shadow: 0 0 0 5px rgba(99,102,241,.10);
+    }
+    .pf-xp-node::after {
+      content: ''; position: absolute; inset: 4px; border-radius: 50%;
+      background: linear-gradient(140deg, var(--blue), #22d3ee);
+    }
+    .pf-xp-tile--novartis  .pf-xp-node { border-color: #22d3ee; }
+    .pf-xp-tile--novartis  .pf-xp-node::after { background: linear-gradient(140deg, #22d3ee, var(--blue)); }
+    .pf-xp-tile--tinyangle .pf-xp-node { border-color: var(--green); }
+    .pf-xp-tile--tinyangle .pf-xp-node::after { background: linear-gradient(140deg, #22d3ee, var(--green)); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .pf-xp-anim { animation: none; }
+      .pf-xp-flow::after { display: none; }
+    }
+
+    /* ═══ VISION (AI Transformation Lead) ─────────────────────── */
+    .pf-vision { padding: 130px 6vw; position: relative; }
+    .pf-vision::before {
+      content: ''; position: absolute; inset: 0; z-index: -1;
+      background: radial-gradient(80% 120% at 50% 0%, rgba(34,211,165,.10), transparent 60%);
+    }
+    .pf-pillars {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      max-width: 1080px; margin: 56px auto 0;
+    }
+    .pf-pillar {
+      padding: 32px 28px; border-radius: var(--radius);
+      background: var(--glass2); border: 1px solid var(--bdr);
+      transition: border-color .25s, transform .25s, box-shadow .25s;
+    }
+    .pf-pillar:hover { border-color: var(--bdrb); transform: translateY(-4px); box-shadow: 0 18px 44px rgba(99,102,241,.18); }
+    .pf-pillar-ic {
+      width: 50px; height: 50px; border-radius: 13px; display: grid; place-items: center;
+      margin-bottom: 18px; color: #fff;
+      background: linear-gradient(140deg, var(--blue), #22d3ee);
+    }
+    .pf-pillar:nth-child(2) .pf-pillar-ic { background: linear-gradient(140deg, #22d3ee, #22d3a5); }
+    .pf-pillar:nth-child(3) .pf-pillar-ic { background: linear-gradient(140deg, #818cf8, #c084fc); }
+    .pf-pillar-ic svg { width: 24px; height: 24px; }
+    .pf-pillar h3 { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 9px; }
+    .pf-pillar p { font-size: 14px; line-height: 1.6; color: var(--muted); }
+
+    /* ═══ PROJECTS (TinyAngle proof) ──────────────────────────── */
+    .pf-proj-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+      max-width: 760px; margin-top: 30px;
+    }
+    .pf-proj {
+      display: block; padding: 22px; border-radius: var(--radius-sm);
+      background: rgba(8,13,26,.6); border: 1px solid var(--bdr);
+      text-decoration: none; transition: border-color .25s, transform .25s, background .25s;
+    }
+    :root[data-theme="light"] .pf-proj { background: rgba(255,255,255,.7); }
+    .pf-proj:hover { border-color: var(--bdrb); transform: translateY(-3px); background: rgba(99,102,241,.06); }
+    .pf-proj-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .pf-proj-name { font-size: 16px; font-weight: 700; color: var(--text); }
+    .pf-status { font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 9px; border-radius: 999px; }
+    .pf-status.live { color: #22d3a5; background: rgba(34,211,165,.12); border: 1px solid var(--bdrg); }
+    .pf-status.mvp  { color: #22d3ee; background: rgba(34,211,238,.12); border: 1px solid rgba(34,211,238,.3); }
+    .pf-status.dev  { color: #fbbf24; background: rgba(251,191,36,.12); border: 1px solid rgba(251,191,36,.3); }
+    .pf-status.poc  { color: #c084fc; background: rgba(192,132,252,.12); border: 1px solid rgba(192,132,252,.3); }
+    .pf-proj-desc { font-size: 13px; line-height: 1.5; color: var(--muted); }
+
+    /* ═══ EXPERTISE + CERTS ───────────────────────────────────── */
+    .pf-exp { padding: 120px 6vw; }
+
+    /* ═══ CAPABILITIES — editorial index rows ─────────────────── */
+    .pf-cap-list { max-width: 1080px; margin: 0 auto; border-top: 1px solid var(--bdr); }
+    .pf-cap-row {
+      position: relative; display: grid; grid-template-columns: minmax(280px, 360px) 1fr;
+      gap: 48px; align-items: center; padding: 44px 8px 44px 28px;
+      border-bottom: 1px solid var(--bdr); transition: background .35s ease;
+    }
+    /* growing gradient accent bar on the left edge */
+    .pf-cap-row::before {
+      content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+      width: 3px; height: 0; border-radius: 3px;
+      background: linear-gradient(180deg, #818cf8, #22d3ee, #22d3a5);
+      transition: height .4s cubic-bezier(.2,.7,.3,1);
+    }
+    .pf-cap-row:hover { background: var(--glass2); }
+    .pf-cap-row:hover::before { height: 64%; }
+    .pf-cap-lead { display: flex; align-items: baseline; gap: 18px; }
+    .pf-cap-num {
+      font-size: clamp(34px, 5vw, 56px); font-weight: 800; line-height: 1; letter-spacing: -.04em;
+      color: transparent; -webkit-text-stroke: 1.4px rgba(var(--ov),.18); flex-shrink: 0;
+      transition: -webkit-text-stroke-color .35s ease;
+    }
+    .pf-cap-row:hover .pf-cap-num { -webkit-text-stroke-color: var(--bdrb); }
+    .pf-cap-domain { font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; line-height: 1.1; letter-spacing: -.02em; margin: 0; }
+    .pf-cap-domain .gr {
+      background: linear-gradient(120deg, #818cf8, #22d3ee, #22d3a5);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent;
+    }
+    .pf-cap-skills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 0; }
+    .pf-cap-skills li {
+      position: relative; font-size: 14.5px; font-weight: 500; line-height: 1.4; color: var(--slt-h);
+      padding: 2px 18px 2px 0; margin-right: 18px; transition: color .25s ease;
+    }
+    .pf-cap-skills li::after {
+      content: ''; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+      width: 4px; height: 4px; border-radius: 50%; background: var(--blue); opacity: .5; transition: opacity .25s ease;
+    }
+    .pf-cap-skills li:last-child { padding-right: 0; margin-right: 0; }
+    .pf-cap-skills li:last-child::after { display: none; }
+    .pf-cap-row:hover .pf-cap-skills li::after { opacity: .9; }
+    :root[data-theme="light"] .pf-cap-num { -webkit-text-stroke-color: rgba(var(--ov),.22); }
+    :root[data-theme="light"] .pf-cap-row:hover { background: rgba(99,102,241,.04); }
+    @media (max-width: 900px) {
+      .pf-cap-row { grid-template-columns: 1fr; gap: 20px; padding: 34px 8px 34px 22px; }
+    }
+    @media (max-width: 600px) {
+      .pf-cap-row { padding: 28px 4px 28px 18px; gap: 16px; }
+      .pf-cap-lead { gap: 14px; }
+      .pf-cap-skills li { font-size: 13.5px; padding-right: 14px; margin-right: 14px; }
+      .pf-cap-row:hover::before { height: 70%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pf-cap-row, .pf-cap-row::before, .pf-cap-num, .pf-cap-skills li, .pf-cap-skills li::after { transition: none; }
+    }
+
+    .pf-credrow { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 1080px; margin: 0 auto; }
+    .pf-credbox { padding: 28px 26px; border-radius: var(--radius); background: var(--glass2); border: 1px solid var(--bdr); }
+    .pf-credbox h3 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--blt); font-weight: 700; margin-bottom: 18px; }
+    .pf-cert { display: flex; gap: 13px; padding: 11px 0; border-bottom: 1px solid var(--bdr); }
+    .pf-cert:last-child { border-bottom: 0; }
+    .pf-cert svg { width: 18px; height: 18px; color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+    .pf-cert b { display: block; font-size: 14.5px; color: var(--text); font-weight: 600; }
+    .pf-cert span { font-size: 12.5px; color: var(--muted); }
+
+    /* ── Grouped, clickable certificate gallery ──────────────────── */
+    .pf-certs-wrap { max-width: 1080px; margin: 0 auto 22px; }
+    .pf-certs-head { display: flex; align-items: baseline; justify-content: space-between; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+    .pf-certs-head h3 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--blt); font-weight: 700; }
+    .pf-certs-hint { font-size: 12px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+    .pf-certs-hint svg { width: 14px; height: 14px; }
+    .pf-certs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .pf-certgroup { padding: 26px 24px; border-radius: var(--radius); background: var(--glass2); border: 1px solid var(--bdr); }
+    .pf-certgroup h4 { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); font-weight: 700; margin-bottom: 8px; }
+    /* Reuse .pf-cert layout, but as an interactive button */
+    button.pf-cert { width: 100%; align-items: center; text-align: left; font: inherit; color: inherit;
+      background: none; border: 0; border-bottom: 1px solid var(--bdr); cursor: pointer;
+      transition: padding-left .18s ease; }
+    button.pf-cert:last-child { border-bottom: 0; }
+    button.pf-cert:hover, button.pf-cert:focus-visible { padding-left: 6px; outline: none; }
+    button.pf-cert:hover b, button.pf-cert:focus-visible b { color: var(--blue); }
+    button.pf-cert > div { flex: 1; min-width: 0; }
+    /* certificate thumbnail preview (injected by JS, click to enlarge) */
+    .pf-cert-thumb { width: 64px; height: 44px; flex-shrink: 0; border-radius: 7px; object-fit: cover;
+      object-position: top center; border: 1px solid var(--bdr); background: #fff;
+      box-shadow: 0 2px 9px rgba(0,0,0,.28); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
+    :root[data-theme="light"] .pf-cert-thumb { box-shadow: 0 2px 9px rgba(16,25,54,.12); }
+    button.pf-cert:hover .pf-cert-thumb, button.pf-cert:focus-visible .pf-cert-thumb {
+      transform: scale(1.05); border-color: var(--bdrb); box-shadow: 0 5px 16px rgba(99,102,241,.32); }
+    .pf-cert-eye { width: 16px; height: 16px; color: var(--muted); margin-left: 10px; flex-shrink: 0;
+      opacity: .35; transition: opacity .18s ease, color .18s ease; }
+    button.pf-cert:hover .pf-cert-eye, button.pf-cert:focus-visible .pf-cert-eye { opacity: 1; color: var(--blue); }
+
+    /* ── Certificate gallery (image-card redesign) ──────────────── */
+    .pf-certgal { max-width: 1080px; margin: 0 auto 40px; }
+    .pf-certgal-hint {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 12.5px; color: var(--muted);
+      padding: 7px 14px; margin: 0 auto 34px;
+      border: 1px solid var(--bdr); border-radius: 999px; background: var(--glass2);
+    }
+    .pf-certgal-hint svg { width: 14px; height: 14px; color: var(--blt); }
+    .pf-certband { margin-bottom: 40px; }
+    .pf-certband:last-child { margin-bottom: 0; }
+    .pf-certband-title {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--muted); font-weight: 700;
+      padding-bottom: 14px; margin-bottom: 22px; border-bottom: 1px solid var(--bdr);
+    }
+    .pf-certband-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; background: var(--blue); }
+    .pf-certband-dot[data-cat="clinical"] { background: var(--green); }
+    .pf-certband-dot[data-cat="lead"]     { background: #a5b4fc; }
+    .pf-certband-dot[data-cat="prod"]     { background: #c084fc; }
+    .pf-certgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+    /* Card — resets the inherited button.pf-cert flex/border base */
+    .pf-certgal .pf-certcard {
+      display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0; width: 100%;
+      text-align: left; font: inherit; color: inherit;
+      background: var(--glass2); border: 1px solid var(--bdr); border-radius: var(--radius);
+      overflow: hidden; cursor: pointer;
+      transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+    }
+    .pf-certgal .pf-certcard:hover, .pf-certgal .pf-certcard:focus-visible {
+      transform: translateY(-6px); border-color: var(--bdrb); box-shadow: 0 18px 40px rgba(0,0,0,.4);
+      outline: none; padding-left: 0;
+    }
+    .pf-certcard-thumbwrap {
+      position: relative; display: block; aspect-ratio: 4 / 3; width: 100%;
+      background: #fff; border-bottom: 1px solid var(--bdr); overflow: hidden;
+    }
+    .pf-certgal .pf-cert-thumb {
+      width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block;
+      border: 0; border-radius: 0; box-shadow: none; transition: transform .35s ease;
+    }
+    .pf-certgal .pf-certcard:hover .pf-cert-thumb,
+    .pf-certgal .pf-certcard:focus-visible .pf-cert-thumb { transform: scale(1.04); }
+    .pf-cert-eyebadge {
+      position: absolute; top: 10px; right: 10px; width: 30px; height: 30px; border-radius: 50%;
+      display: grid; place-items: center; background: rgba(15,18,32,.78); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,.16); opacity: 0; transform: scale(.85);
+      transition: opacity .25s ease, transform .25s ease;
+    }
+    .pf-certgal .pf-cert-eyebadge .pf-cert-eye { width: 15px; height: 15px; color: #fff; opacity: 1; margin: 0; }
+    .pf-certgal .pf-certcard:hover .pf-cert-eyebadge,
+    .pf-certgal .pf-certcard:focus-visible .pf-cert-eyebadge { opacity: 1; transform: scale(1); }
+    .pf-certcard-body { display: flex; flex-direction: column; gap: 7px; padding: 16px 16px 18px; flex: 1; }
+    .pf-certcard-tag {
+      align-self: flex-start; font-size: 10.5px; letter-spacing: .06em; font-weight: 700; text-transform: uppercase;
+      padding: 3px 9px; border-radius: 999px;
+      color: var(--blt); background: rgba(99,102,241,.14); border: 1px solid rgba(99,102,241,.28);
+    }
+    .pf-certcard-tag[data-cat="clinical"] { color: var(--green); background: rgba(34,211,165,.13); border-color: rgba(34,211,165,.3); }
+    .pf-certcard-tag[data-cat="lead"]     { color: #a5b4fc; background: rgba(165,180,252,.13); border-color: rgba(165,180,252,.3); }
+    .pf-certcard-tag[data-cat="prod"]     { color: #c084fc; background: rgba(192,132,252,.13); border-color: rgba(192,132,252,.3); }
+    .pf-certgal .pf-certcard-title { display: block; font-size: 14.5px; font-weight: 600; line-height: 1.35; color: var(--text); transition: color .25s ease; }
+    .pf-certgal .pf-certcard:hover .pf-certcard-title,
+    .pf-certgal .pf-certcard:focus-visible .pf-certcard-title { color: var(--blt); }
+    .pf-certcard-sub { font-size: 12px; color: var(--muted); line-height: 1.4; margin-top: auto; padding-top: 2px; }
+    /* Cleaner Core credentials / Education */
+    .pf-credbox-title { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--blt); font-weight: 700; margin-bottom: 6px; }
+    .pf-credlist { list-style: none; margin: 0; padding: 0; }
+    .pf-creditem { display: flex; gap: 14px; align-items: flex-start; padding: 16px 0; border-bottom: 1px solid var(--bdr); }
+    .pf-creditem:last-child { border-bottom: 0; }
+    .pf-creditem > svg { width: 19px; height: 19px; color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+    .pf-creditem b { display: block; font-size: 14.5px; color: var(--text); font-weight: 600; margin-bottom: 3px; }
+    .pf-creditem span { font-size: 12.5px; color: var(--muted); line-height: 1.45; }
+    :root[data-theme="light"] .pf-certgal .pf-certcard:hover,
+    :root[data-theme="light"] .pf-certgal .pf-certcard:focus-visible { box-shadow: 0 16px 36px rgba(16,25,54,.16); }
+    :root[data-theme="light"] .pf-cert-eyebadge { background: rgba(255,255,255,.92); border-color: rgba(16,25,54,.12); }
+    :root[data-theme="light"] .pf-certgal .pf-cert-eyebadge .pf-cert-eye { color: var(--blue); }
+    @media (max-width: 900px) {
+      .pf-certgrid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+      .pf-certband { margin-bottom: 34px; }
+    }
+    @media (max-width: 600px) {
+      .pf-certgrid { gap: 14px; }
+      .pf-certcard-body { padding: 13px 13px 15px; gap: 6px; }
+      .pf-certgal .pf-certcard-title { font-size: 13.5px; }
+    }
+    @media (max-width: 420px) {
+      .pf-certgrid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .pf-certgal .pf-certcard, .pf-certgal .pf-cert-thumb, .pf-cert-eyebadge { transition: none; }
+      .pf-certgal .pf-certcard:hover, .pf-certgal .pf-certcard:focus-visible { transform: none; }
+      .pf-certgal .pf-certcard:hover .pf-cert-thumb, .pf-certgal .pf-certcard:focus-visible .pf-cert-thumb { transform: none; }
+    }
+
+    /* ── Certificate lightbox ────────────────────────────────────── */
+    .pf-lightbox { position: fixed; inset: 0; z-index: 200; display: none; align-items: center; justify-content: center;
+      padding: 5vh 4vw; background: rgba(5,7,15,.86); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+    .pf-lightbox.open { display: flex; }
+    .pf-lightbox figure { margin: 0; max-width: 980px; max-height: 92vh; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+    .pf-lightbox img { max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 12px;
+      border: 1px solid var(--bdr); box-shadow: 0 30px 80px rgba(0,0,0,.6); background: #fff; }
+    .pf-lightbox figcaption { color: var(--text); font-size: 14.5px; font-weight: 600; text-align: center; }
+    .pf-lightbox figcaption span { display: block; color: var(--muted); font-size: 12.5px; font-weight: 400; margin-top: 3px; }
+    .pf-lb-close { position: absolute; top: 18px; right: 22px; width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid var(--bdr); background: var(--glass2); color: var(--text); cursor: pointer;
+      display: flex; align-items: center; justify-content: center; transition: color .18s ease, border-color .18s ease; }
+    .pf-lb-close:hover { color: var(--blue); border-color: var(--blue); }
+    .pf-lb-close svg { width: 20px; height: 20px; }
+
+    /* ═══ CLOSE / CTA ─────────────────────────────────────────── */
+    .pf-close {
+      min-height: 88vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 120px 7vw;
+      background: radial-gradient(120% 120% at 50% 80%, rgba(34,211,165,.14), transparent 55%), var(--bg);
+    }
+    .pf-close .pf-bg { background-image: var(--pf-img-close); }
+    .pf-close-inner { max-width: 720px; }
+    .pf-close h2 { font-size: clamp(30px, 5vw, 54px); font-weight: 800; letter-spacing: -.025em; line-height: 1.05; color: var(--text); margin-bottom: 20px; }
+    .pf-close h2 .gr { background: linear-gradient(120deg, #818cf8, #22d3ee, #22d3a5); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; }
+    .pf-close p { font-size: 17px; line-height: 1.6; color: var(--muted); margin-bottom: 34px; }
+    .pf-close-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .pf-close-note { margin-top: 26px; font-size: 13px; color: var(--mut2); }
+
+    /* ── Responsive ───────────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .pf-hero-grid { grid-template-columns: 1fr; gap: 52px; max-width: 560px; }
+      .pf-portrait { max-width: 320px; }
+      .pf-scrollcue { display: none; }
+      .pf-pillars { grid-template-columns: 1fr; }
+      .pf-route { grid-template-columns: repeat(2, 1fr); gap: 36px 22px; }
+      .pf-route::before, .pf-route::after { display: none; }
+      .pf-credrow, .pf-certs-grid { grid-template-columns: 1fr; }
+      .pf-chapter, .pf-chapter.right { justify-content: center; }
+      .pf-proj-grid { grid-template-columns: 1fr; }
+      .pf-xp { padding: 90px 5vw; }
+      .pf-xp-flow { padding-left: 42px; }
+      .pf-xp-flow::before { left: 15px; }
+      .pf-xp-flow::after { left: 12px; }
+      .pf-xp-node { left: -35px; top: 34px; width: 16px; height: 16px; }
+    }
+    @media (max-width: 600px) {
+      .pf-stat { padding: 0 30px; }
+      .pf-stat .pf-num { font-size: 46px; }
+    }
+    @media (max-width: 540px) {
+      .pf-route { grid-template-columns: 1fr; }
+      .pf-hero { padding: 110px 7vw 80px; }
+      .pf-card { padding: 30px 24px; }
+    }
+
+    /* ── Reduced motion ───────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      .pf-bg { transform: none !important; }
+      .pf-route::before { transition: none; transform: scaleX(1); }
+      .pf-scrollcue .pf-mouse::before, .pf-eyebrow .pf-dot { animation: none; }
+      /* No auto-scroll: let the row sit still and be swiped instead. */
+      .pf-stats-track { animation: none !important; }
+      .pf-stats { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
+    /* ═══════════════════════════════════════════════════════════
+       LIGHT THEME REFINEMENTS (portfolio)
+       The cyan/green gradient text and pale status colors tuned for the
+       dark theme wash out on white, so remap them to higher-contrast hues.
+       ═══════════════════════════════════════════════════════════ */
+    :root[data-theme="light"] .pf-main .gr,
+    :root[data-theme="light"] .pf-hero h1 .gr,
+    :root[data-theme="light"] .pf-role .gr,
+    :root[data-theme="light"] .pf-sec-title .gr,
+    :root[data-theme="light"] .pf-card h2 .gr,
+    :root[data-theme="light"] .pf-close h2 .gr {
+      background: linear-gradient(125deg, #4f46e5, #7c3aed, #4338ca);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
+    :root[data-theme="light"] .pf-stat .pf-num {
+      background: linear-gradient(120deg, #4f46e5, #7c3aed);
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    /* Status chips — darken text so it reads on the light tinted pills */
+    :root[data-theme="light"] .pf-status.live { color: #0f9d6b; background: rgba(16,185,129,.12); border-color: rgba(16,185,129,.34); }
+    :root[data-theme="light"] .pf-status.mvp  { color: #0e7490; background: rgba(8,145,178,.12);  border-color: rgba(8,145,178,.34); }
+    :root[data-theme="light"] .pf-status.dev  { color: #b45309; background: rgba(180,83,9,.12);   border-color: rgba(180,83,9,.30); }
+    :root[data-theme="light"] .pf-status.poc  { color: #7c3aed; background: rgba(124,58,237,.10); border-color: rgba(124,58,237,.30); }
+    /* Glass cards/badges get a touch more opacity + a soft lift on white */
+    :root[data-theme="light"] .pf-card { box-shadow: 0 24px 60px rgba(16,25,54,.13); }
+    :root[data-theme="light"] .pf-portrait-frame {
+      box-shadow: 0 36px 80px rgba(16,25,54,.20), 0 0 60px rgba(99,102,241,.20);
+    }
+
+    /* Buttons reusing the shared btn-* classes need the page font */
+
+    /* ═══ PRINTABLE RÉSUMÉ ════════════════════════════════════════
+       Hidden on screen; revealed only when printing / saving to PDF.
+       Single column with real selectable text (ATS-parseable), styled
+       in the site's dark theme language. */
+    .resume-doc { display: none; }
+
+    @media print {
+      /* Hide the entire interactive portfolio; show only the résumé */
+      .pf-progress, nav, .mobile-menu, footer, .pf-main, .pf-lightbox, .theme-toggle,
+      .bg-grid, .bg-glow, .bg-glow-2, .bg-glow-3 { display: none !important; }
+      .resume-doc { display: block !important; }
+
+      /* Light, print-safe résumé: white paper + dark text, so it renders correctly
+         regardless of the print dialog's "Background graphics" setting (there is no
+         background to print — only foreground text and borders, which always print). */
+      @page { size: A4; margin: 14mm 14mm; }
+      html, body { background: #ffffff !important; color: #1f2430 !important; }
+      .resume-doc {
+        /* Helvetica — a top-ranked, ATS-safe professional résumé typeface (with
+           cross-platform fallbacks: Arimo/Liberation Sans are metric-compatible). */
+        font-family: 'Helvetica Neue', Helvetica, Arimo, 'Liberation Sans', Arial, sans-serif;
+        font-size: 10pt; line-height: 1.42; color: #1f2430; background: transparent;
+        padding: 0 3mm; box-sizing: border-box;
+      }
+      .resume-doc a { color: inherit; text-decoration: none; }
+
+      .rz-head { text-align: center; padding-bottom: 10px; margin-bottom: 14px; border-bottom: 2px solid #4338ca; }
+      .rz-name { font-size: 24pt; font-weight: 800; letter-spacing: -.02em; line-height: 1.04; margin: 0 0 3px; color: #111827; }
+      .rz-title { font-size: 11.5pt; font-weight: 600; color: #4338ca; margin: 0 0 7px; }
+      .rz-contact { font-size: 9.2pt; color: #4b5563; margin: 0; }
+
+      .rz-sec { margin-bottom: 12px; }
+      .rz-h2 {
+        font-size: 10.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+        color: #4338ca; margin: 0 0 7px; padding-bottom: 3px; border-bottom: 1px solid #cbd5e1;
+        break-after: avoid; page-break-after: avoid;
+      }
+      .rz-summary { margin: 0; color: #1f2937; }
+      /* Core Competencies — two-column skill bullets (compact, ATS-readable) */
+      .rz-comp-cat { font-weight: 700; color: #111827; font-size: 10pt; margin: 5px 0 1px; }
+      .rz-comp-cat:first-child { margin-top: 0; }
+      .rz-comp-list { list-style: disc; columns: 2; column-gap: 28px; margin: 0 0 3px; padding-left: 16px; }
+      .rz-comp-list li { margin: 0 0 1px; color: #1f2937; break-inside: avoid; -webkit-column-break-inside: avoid; }
+      .rz-skills { list-style: none; margin: 0; padding: 0; }
+      .rz-skills li { margin: 0 0 4px; color: #1f2937; }
+      .rz-skills strong, .rz-edu strong, .rz-summary strong, .rz-bullets strong, .rz-highlights strong { color: #111827; }
+
+      .rz-job { margin-bottom: 9px; }
+      /* Keep a role's header + first lines together, but let later bullets flow
+         across a page break so pages fill (no large bottom gaps). */
+      .rz-job-head, .rz-job-meta { break-after: avoid; page-break-after: avoid; }
+      .rz-job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; }
+      .rz-job-role { font-size: 10.6pt; font-weight: 700; color: #111827; }
+      .rz-job-dates { font-size: 9.2pt; font-weight: 700; color: #4338ca; white-space: nowrap; }
+      .rz-job-meta { font-size: 9.2pt; color: #6b7280; font-style: italic; margin: 1px 0 4px; }
+      .rz-bullets { margin: 0; padding-left: 16px; }
+      .rz-bullets li { margin: 0 0 2px; color: #1f2937; }
+
+      .rz-certs { margin: 0; padding-left: 16px; }
+      .rz-certs li { margin: 0 0 2px; color: #1f2937; }
+      .rz-edu { margin: 0; color: #1f2937; }
+
+      .rz-highlights { margin: 0; padding-left: 16px; }
+      .rz-highlights li { margin: 0 0 3px; color: #1f2937; }
+      .rz-highlights li::marker { color: #4f46e5; }
+
+      /* Closing footer at the end of the document */
+      .rz-footer {
+        margin-top: 14px; padding-top: 7px; border-top: 1px solid #cbd5e1;
+        text-align: center; font-size: 8pt; letter-spacing: .03em; color: #6b7280;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background -->
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+<div class="bg-glow-2"></div>
+<div class="bg-glow-3"></div>
+
+<div class="pf-progress" id="pfProgress" aria-hidden="true"></div>
+
+<!-- ═══ NAV ═══════════════════════════════════════════════════ -->
+<nav role="navigation" aria-label="Main navigation">
+  <a class="nav-brand" href="index.html" aria-label="TinyAngle Studio Home">
+    <img class="nav-logo" src="Images/TinyAngleStudio%20Logo.jpeg" alt="TinyAngle Studio" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="nav-logo-fallback" style="display:none">TA</div>
+    <span class="nav-nm">TinyAngle<span> Studio</span></span>
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="case-studies.html">Case Studies</a></li>
+    <li><a href="team.html">Founder</a></li>
+    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    <li><a href="blog.html">Insights</a></li>
+    <li><a href="resources.html">Resources</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+    <li><button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" title="Toggle theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></button></li>
+  </ul>
+  <button class="nav-hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="case-studies.html">Case Studies</a>
+  <a href="team.html">Founder</a>
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="blog.html">Insights</a>
+  <a href="resources.html">Resources</a>
+  <a href="contact.html" class="nav-cta">Contact</a>
+  <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg><span class="tgl-label">Switch theme</span></button>
+</div>
+
+<main class="pf-main">
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════ -->
+  <section class="pf-hero pf-cine" id="top" aria-label="Introduction">
+    <div class="pf-bg" data-parallax="0.18"></div>
+    <div class="pf-bg-tint"></div>
+    <div class="pf-hero-grid">
+    <div class="pf-hero-inner">
+      <div class="pf-eyebrow rev"><span class="pf-dot" aria-hidden="true"></span> Professional Portfolio &nbsp;·&nbsp; Pune, India</div>
+      <h1 class="rev rev-d1">Rupesh Shinde</h1>
+      <p class="pf-role rev rev-d1">Enterprise Healthcare <span class="gr">AI &amp; Digital Transformation</span> Leader</p>
+      <p class="pf-lead rev rev-d2">
+        <strong>18+ years</strong> directing regulated clinical-platform governance, enterprise CTMS
+        modernization, and AI-enabled workflow transformation across global pharmaceutical operations.
+        Driving GxP-compliant platform excellence at <strong>Novartis</strong> — and building the next
+        generation of healthcare AI as founder of <strong>TinyAngle Studio</strong>.
+      </p>
+      <div class="pf-hero-actions rev rev-d3">
+        <a href="#novartis" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+          Explore my career
+        </a>
+      </div>
+      <div class="pf-meta-row rev rev-d3">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Pune, India · Open to global engagements</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a2 2 0 0 1 2 2v14a2 2 0 0 0-2-2H2z"/><path d="M22 3h-6a2 2 0 0 0-2 2v14a2 2 0 0 1 2-2h6z"/></svg> Novartis · Cognizant · TinyAngle Studio</span>
+      </div>
+      <a href="#stats" class="pf-scrollcue" aria-label="Scroll to explore"><span class="pf-mouse" aria-hidden="true"></span> Scroll the story</a>
+    </div>
+    <div class="pf-portrait rev rev-d2">
+      <div class="pf-portrait-frame">
+        <img src="Images/portfolio/rupesh-portrait.png" alt="Rupesh Shinde — Enterprise Healthcare AI &amp; Digital Transformation Leader" loading="eager" decoding="async">
+      </div>
+      <div class="pf-portrait-badge">
+        <span class="pf-portrait-badge-dot" aria-hidden="true"></span>
+        <span class="pf-portrait-badge-txt"><strong>Rupesh Shinde</strong>Founder · Novartis CTMS Lead</span>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ═══ STATS STRIP ════════════════════════════════════════ -->
+  <section class="pf-stats" id="stats" role="region" aria-label="Career highlights">
+    <div class="pf-stats-track">
+      <!-- Set 1 -->
+      <div class="pf-stat"><div class="pf-num">18<span class="pf-suf">+</span></div><div class="pf-lbl">Years in healthcare technology</div></div>
+      <div class="pf-stat"><div class="pf-num">20<span class="pf-suf">+</span></div><div class="pf-lbl">Countries served at Novartis</div></div>
+      <div class="pf-stat"><div class="pf-num">40<span class="pf-suf">+</span></div><div class="pf-lbl">Global team members led</div></div>
+      <div class="pf-stat"><div class="pf-num">15&ndash;25<span class="pf-suf">%</span></div><div class="pf-lbl">Efficiency gains delivered</div></div>
+      <div class="pf-stat"><div class="pf-num">5<span class="pf-suf">+</span></div><div class="pf-lbl">AI healthcare solutions shipped</div></div>
+      <!-- Set 2 — duplicate for the seamless loop (hidden from assistive tech) -->
+      <div class="pf-stat" aria-hidden="true"><div class="pf-num">18<span class="pf-suf">+</span></div><div class="pf-lbl">Years in healthcare technology</div></div>
+      <div class="pf-stat" aria-hidden="true"><div class="pf-num">20<span class="pf-suf">+</span></div><div class="pf-lbl">Countries served at Novartis</div></div>
+      <div class="pf-stat" aria-hidden="true"><div class="pf-num">40<span class="pf-suf">+</span></div><div class="pf-lbl">Global team members led</div></div>
+      <div class="pf-stat" aria-hidden="true"><div class="pf-num">15&ndash;25<span class="pf-suf">%</span></div><div class="pf-lbl">Efficiency gains delivered</div></div>
+      <div class="pf-stat" aria-hidden="true"><div class="pf-num">5<span class="pf-suf">+</span></div><div class="pf-lbl">AI healthcare solutions shipped</div></div>
+    </div>
+  </section>
+
+  <!-- ═══ JOURNEY MAP ════════════════════════════════════════ -->
+  <section class="pf-journey pf-cine" aria-label="Career journey">
+    <div class="pf-bg" data-parallax="0.12"></div>
+    <div class="pf-bg-tint"></div>
+    <div class="pf-journey-glow" aria-hidden="true"></div>
+    <div class="pf-sec-head rev">
+      <div class="pf-sec-eye">The Journey</div>
+      <h2 class="pf-sec-title">A global career, <span class="gr">across three continents</span></h2>
+      <p class="pf-sec-sub">From an engineering degree in Pune to enterprise clinical platforms in New Jersey and Basel — and now an AI innovation lab of my own.</p>
+    </div>
+    <div class="pf-route rev" id="pfRoute" role="list">
+      <div class="pf-node" role="listitem">
+        <div class="pf-node-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <div class="pf-node-yr">2007</div>
+        <div class="pf-node-place">Pune, India</div>
+        <div class="pf-node-role">B.E., Shivaji University — the foundation</div>
+      </div>
+      <div class="pf-node" role="listitem">
+        <div class="pf-node-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div class="pf-node-yr">2007&ndash;2021</div>
+        <div class="pf-node-place">New Jersey · Basel</div>
+        <div class="pf-node-role">Cognizant — 14 years of regulated delivery</div>
+      </div>
+      <div class="pf-node" role="listitem">
+        <div class="pf-node-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div>
+        <div class="pf-node-yr">2022&ndash;Now</div>
+        <div class="pf-node-place">Pune, India</div>
+        <div class="pf-node-role">Novartis — enterprise CTMS &amp; AI transformation</div>
+      </div>
+      <div class="pf-node" role="listitem">
+        <div class="pf-node-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m0 0 3-3m-3 3L9 5"/><circle cx="12" cy="14" r="7"/><path d="M12 11v3l2 2"/></svg></div>
+        <div class="pf-node-yr">2026&ndash;Now</div>
+        <div class="pf-node-place">Pune, India</div>
+        <div class="pf-node-role">TinyAngle Studio — founder &amp; AI product lead</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROFESSIONAL EXPERIENCE (connected timeline) ═══════ -->
+  <section class="pf-xp" id="experience" aria-label="Professional experience">
+    <div class="pf-xp-anim" aria-hidden="true"></div>
+    <div class="pf-sec-head rev">
+      <div class="pf-sec-eye">Professional Experience</div>
+      <h2 class="pf-sec-title">Two decades <span class="gr">building regulated healthcare technology</span></h2>
+      <p class="pf-sec-sub">One continuous through-line — from large-scale clinical delivery, to enterprise AI transformation, to an innovation lab of my own.</p>
+    </div>
+    <div class="pf-xp-flow rev">
+
+      <!-- 2022–Present -->
+      <article class="pf-xp-tile pf-xp-tile--novartis" id="novartis">
+        <span class="pf-xp-node" aria-hidden="true"></span>
+        <div class="pf-card">
+          <span class="pf-card-eye">Current Role · 2022 – Present</span>
+          <h2>Novartis — <span class="gr">Enterprise CTMS &amp; AI Transformation</span></h2>
+          <div class="pf-card-meta">Technology Product Manager / CTMS Lead · Basel, Switzerland &amp; Hyderabad, India</div>
+          <ul class="pf-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Spearheaded enterprise <strong>CTMS product strategy and global platform roadmap across 20+ countries</strong>, driving clinical-operations modernization.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Orchestrated GxP-compliant delivery achieving <strong>15–25% operational efficiency gains</strong> through AI-enabled workflow automation and Veeva Vault optimization.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Governed <strong>Computer System Validation (CSV, CSA)</strong> ensuring 21 CFR Part 11 and EU Annex 11 regulatory adherence.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Served as <strong>PQ business lead</strong> for platform releases and led AI-driven clinical documentation &amp; eTMF workflow transformation.</span></li>
+          </ul>
+          <div class="pf-chips">
+            <span class="pf-chip">Enterprise CTMS</span><span class="pf-chip">Veeva Vault</span><span class="pf-chip">GxP / CSV / CSA</span>
+            <span class="pf-chip">AI Workflow Automation</span><span class="pf-chip">21 CFR Part 11</span><span class="pf-chip">EU Annex 11</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2007–2021 -->
+      <article class="pf-xp-tile pf-xp-tile--cognizant">
+        <span class="pf-xp-node" aria-hidden="true"></span>
+        <div class="pf-card">
+          <span class="pf-card-eye">Foundation · 2007 – 2021 · 14 Years</span>
+          <h2>Cognizant — <span class="gr">Regulated Delivery at Scale</span></h2>
+          <div class="pf-card-meta">Senior Technology Lead / Product Specialist · New Jersey, USA · Basel · India</div>
+          <ul class="pf-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Directed healthcare technology transformation for <strong>Fortune 500 pharmaceutical enterprises</strong> across the US, Europe and India.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Orchestrated <strong>enterprise CTMS implementations across 10+ simultaneous global programs</strong> for leading pharma organizations.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Led cross-functional delivery teams of <strong>40+ members</strong> and governed CSV documentation, validation and EDC administration.</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>International Hackathon Finalist</strong> — presented clinical technology outcomes at Novartis Global HQ, Basel.</span></li>
+          </ul>
+          <div class="pf-chips">
+            <span class="pf-chip">Clinical Systems</span><span class="pf-chip">CSV / Validation</span><span class="pf-chip">EDC · eTMF</span>
+            <span class="pf-chip">ETL Pipelines</span><span class="pf-chip">Team Leadership</span><span class="pf-chip">ICH E6 GCP</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2026–Present -->
+      <article class="pf-xp-tile pf-xp-tile--tinyangle">
+        <span class="pf-xp-node" aria-hidden="true"></span>
+        <div class="pf-card">
+          <span class="pf-card-eye">Founder · 2026 – Present</span>
+          <h2>TinyAngle Studio — <span class="gr">AI, Built in Practice</span></h2>
+          <div class="pf-card-meta">Founder &amp; AI Product Lead · Independent AI innovation lab · Pune, India</div>
+          <p class="pf-sec-sub" style="margin:0 0 6px; color:var(--muted);">
+            Beyond strategy, I build. TinyAngle Studio is where I prototype and ship the AI healthcare
+            workflows I advocate at enterprise scale — proof that the transformation vision is grounded in
+            real, working product.
+          </p>
+          <div class="pf-proj-grid">
+            <a href="projects.html" class="pf-proj">
+              <div class="pf-proj-top"><span class="pf-proj-name">MediScribe</span><span class="pf-status mvp">MVP</span></div>
+              <p class="pf-proj-desc">Ambient AI clinical documentation — SOAP notes, ICD-10 auto-coding &amp; EHR integration.</p>
+            </a>
+            <a href="projects.html" class="pf-proj">
+              <div class="pf-proj-top"><span class="pf-proj-name">ResQ</span><span class="pf-status dev">In Dev</span></div>
+              <p class="pf-proj-desc">AI emergency coordination — triage, smart routing &amp; offline-first critical care.</p>
+            </a>
+            <a href="case-studies/orthopedic-platform.html" class="pf-proj">
+              <div class="pf-proj-top"><span class="pf-proj-name">Orthopedic Platform</span><span class="pf-status live">Live</span></div>
+              <p class="pf-proj-desc">Digital health platform — 40% new-patient growth, 4.9★ satisfaction.</p>
+            </a>
+            <a href="case-studies/sir-automation.html" class="pf-proj">
+              <div class="pf-proj-top"><span class="pf-proj-name">Gov CIC Automation</span><span class="pf-status poc">POC</span></div>
+              <p class="pf-proj-desc">QR-based citizen data capture with automated reviewer workflows.</p>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══ CERTIFICATIONS ═════════════════════════════════════ -->
+  <section class="pf-exp" aria-label="Certifications and credentials">
+    <div class="pf-sec-head rev">
+      <div class="pf-sec-eye">Credentials</div>
+      <h2 class="pf-sec-title">Certifications &amp; <span class="gr">continuous learning</span></h2>
+    </div>
+
+    <!-- Certificate gallery — prominent image cards; click any card to view it full size -->
+    <div class="pf-certgal rev">
+      <div class="pf-certgal-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        Tap any certificate to view it full size
+      </div>
+
+      <div class="pf-certband">
+        <h3 class="pf-certband-title"><span class="pf-certband-dot" data-cat="ai"></span>AI &amp; Healthcare Workshops</h3>
+        <div class="pf-certgrid">
+          <button type="button" class="pf-cert pf-certcard rev" data-cat="ai" data-cert="Images/portfolio/certificates/ai-tools-healthcare-iitk.jpeg" data-cert-title="AI Tools for Healthcare Professionals" data-cert-sub="IIT Kanpur · Techkriti 2026 · March 2026">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/ai-tools-healthcare-iitk.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="ai">AI &amp; Healthcare</span><b class="pf-certcard-title">AI Tools for Healthcare Professionals</b><span class="pf-certcard-sub">IIT Kanpur · Techkriti 2026 · March 2026</span></span>
+          </button>
+          <button type="button" class="pf-cert pf-certcard rev rev-d1" data-cat="ai" data-cert="Images/portfolio/certificates/agentic-ai-ml-iitk.jpeg" data-cert-title="Agentic AI &amp; ML: Build an Autonomous Workflow" data-cert-sub="IIT Kanpur · Techkriti 2026 · March 2026">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/agentic-ai-ml-iitk.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="ai">AI &amp; Healthcare</span><b class="pf-certcard-title">Agentic AI &amp; ML: Build an Autonomous Workflow</b><span class="pf-certcard-sub">IIT Kanpur · Techkriti 2026 · March 2026</span></span>
+          </button>
+          <button type="button" class="pf-cert pf-certcard rev rev-d2" data-cat="ai" data-cert="Images/portfolio/certificates/agentic-ai-workflows-mitwpu.jpeg" data-cert-title="Agentic AI: Build Autonomous AI Workflows" data-cert-sub="MIT-WPU, Pune · The Equine Collective · May 2026">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/agentic-ai-workflows-mitwpu.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="ai">AI &amp; Healthcare</span><b class="pf-certcard-title">Agentic AI: Build Autonomous AI Workflows</b><span class="pf-certcard-sub">MIT-WPU, Pune · The Equine Collective · May 2026</span></span>
+          </button>
+          <button type="button" class="pf-cert pf-certcard rev rev-d3" data-cat="ai" data-cert="Images/portfolio/certificates/claude-ai-masterclass-mitwpu.jpeg" data-cert-title="Claude AI Masterclass" data-cert-sub="MIT-WPU, Pune · The Equine Collective · May 2026">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/claude-ai-masterclass-mitwpu.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="ai">AI &amp; Healthcare</span><b class="pf-certcard-title">Claude AI Masterclass</b><span class="pf-certcard-sub">MIT-WPU, Pune · The Equine Collective · May 2026</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pf-certband">
+        <h3 class="pf-certband-title"><span class="pf-certband-dot" data-cat="clinical"></span>Enterprise Clinical Platforms</h3>
+        <div class="pf-certgrid">
+          <button type="button" class="pf-cert pf-certcard rev" data-cat="clinical" data-cert="Images/portfolio/certificates/veeva-vault-fundamentals.jpeg" data-cert-title="Veeva Vault Platform Fundamentals" data-cert-sub="Veeva Training Services · June 2025">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/veeva-vault-fundamentals.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="clinical">Clinical Platforms</span><b class="pf-certcard-title">Veeva Vault Platform Fundamentals</b><span class="pf-certcard-sub">Veeva Training Services · June 2025</span></span>
+          </button>
+          <button type="button" class="pf-cert pf-certcard rev rev-d1" data-cat="clinical" data-cert="Images/portfolio/certificates/veeva-vault-business-admin.jpeg" data-cert-title="Veeva Vault Platform Business Administrator" data-cert-sub="Veeva Training Services · June 2025">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/veeva-vault-business-admin.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="clinical">Clinical Platforms</span><b class="pf-certcard-title">Veeva Vault Platform Business Administrator</b><span class="pf-certcard-sub">Veeva Training Services · June 2025</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pf-certband">
+        <h3 class="pf-certband-title"><span class="pf-certband-dot" data-cat="lead"></span>Leadership &amp; Management</h3>
+        <div class="pf-certgrid">
+          <button type="button" class="pf-cert pf-certcard rev" data-cat="lead" data-cert="Images/portfolio/certificates/project-management-educate360.jpeg" data-cert-title="Project Management Advanced Workshop" data-cert-sub="Educate 360 · April 2025">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/project-management-educate360.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="lead">Leadership</span><b class="pf-certcard-title">Project Management Advanced Workshop</b><span class="pf-certcard-sub">Educate 360 · April 2025</span></span>
+          </button>
+          <button type="button" class="pf-cert pf-certcard rev rev-d1" data-cat="lead" data-cert="Images/portfolio/certificates/executive-presence-bootcamp-excel360.png" data-cert-title="Executive Presence Mastery Bootcamp" data-cert-sub="Excel360 · 5-day intensive · December 2025">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/executive-presence-bootcamp-excel360.png" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="lead">Leadership</span><b class="pf-certcard-title">Executive Presence Mastery Bootcamp</b><span class="pf-certcard-sub">Excel360 · 5-day intensive · December 2025</span></span>
+          </button>
+          <button type="button" class="pf-cert pf-certcard rev rev-d2" data-cat="lead" data-cert="Images/portfolio/certificates/people-management-learntube.png" data-cert-title="People Management Assessment" data-cert-sub="LearnTube.ai · December 2025">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/people-management-learntube.png" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="lead">Leadership</span><b class="pf-certcard-title">People Management Assessment</b><span class="pf-certcard-sub">LearnTube.ai · December 2025</span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="pf-certband">
+        <h3 class="pf-certband-title"><span class="pf-certband-dot" data-cat="prod"></span>Productivity &amp; Digital Skills</h3>
+        <div class="pf-certgrid">
+          <button type="button" class="pf-cert pf-certcard rev" data-cat="prod" data-cert="Images/portfolio/certificates/excel-using-ai-officemaster.jpeg" data-cert-title="Microsoft Excel Using AI" data-cert-sub="OfficeMaster · July 2025">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/excel-using-ai-officemaster.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="prod">Productivity</span><b class="pf-certcard-title">Microsoft Excel Using AI</b><span class="pf-certcard-sub">OfficeMaster · July 2025</span></span>
+          </button>
+          <button type="button" class="pf-cert pf-certcard rev rev-d1" data-cat="prod" data-cert="Images/portfolio/certificates/facebook-instagram-ads-skillnation.jpeg" data-cert-title="Facebook &amp; Instagram Ads Masterclass" data-cert-sub="Skill Nation · July 2022">
+            <span class="pf-certcard-thumbwrap"><img class="pf-cert-thumb" src="Images/portfolio/certificates/facebook-instagram-ads-skillnation.jpeg" alt="" loading="lazy" decoding="async"><span class="pf-cert-eyebadge"><svg class="pf-cert-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></span></span>
+            <span class="pf-certcard-body"><span class="pf-certcard-tag" data-cat="prod">Productivity</span><b class="pf-certcard-title">Facebook &amp; Instagram Ads Masterclass</b><span class="pf-certcard-sub">Skill Nation · July 2022</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core credentials + Education — no-image text items -->
+    <div class="pf-credrow">
+      <div class="pf-credbox rev">
+        <h3 class="pf-credbox-title">Core credentials</h3>
+        <ul class="pf-credlist">
+          <li class="pf-creditem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg><div><b>Certified Product Owner (Clinical Systems)</b><span>Veeva Vault Platform · Oracle SQL · ITIL Foundation · Six Sigma Green Belt</span></div></li>
+          <li class="pf-creditem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg><div><b>GxP · CSV/CSA · 21 CFR Part 11 · EU Annex 11</b><span>Regulated clinical platform validation &amp; governance</span></div></li>
+        </ul>
+      </div>
+      <div class="pf-credbox rev rev-d1">
+        <h3 class="pf-credbox-title">Education</h3>
+        <ul class="pf-credlist">
+          <li class="pf-creditem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg><div><b>Bachelor of Engineering</b><span>Shivaji University, India · Class of 2007</span></div></li>
+          <li class="pf-creditem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><div><b>Continuous learning</b><span>Generative &amp; Agentic AI, healthcare AI systems, enterprise transformation</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CAPABILITIES ═══════════════════════════════════════ -->
+  <section class="pf-exp" aria-label="Capabilities and expertise">
+    <div class="pf-sec-head rev">
+      <div class="pf-sec-eye">Capabilities</div>
+      <h2 class="pf-sec-title">Areas of <span class="gr">expertise</span></h2>
+    </div>
+    <div class="pf-cap-list">
+
+      <article class="pf-cap-row rev">
+        <div class="pf-cap-lead">
+          <span class="pf-cap-num">01</span>
+          <h3 class="pf-cap-domain"><span class="gr">Healthcare Technology</span></h3>
+        </div>
+        <ul class="pf-cap-skills">
+          <li>Enterprise CTMS</li>
+          <li>Veeva Vault</li>
+          <li>EDC · eTMF</li>
+          <li>GxP Compliance</li>
+          <li>CSV · CSA</li>
+          <li>21 CFR Part 11</li>
+          <li>EU Annex 11</li>
+          <li>HL7 · FHIR</li>
+          <li>Clinical Operations</li>
+        </ul>
+      </article>
+
+      <article class="pf-cap-row rev rev-d1">
+        <div class="pf-cap-lead">
+          <span class="pf-cap-num">02</span>
+          <h3 class="pf-cap-domain"><span class="gr">AI &amp; Automation</span></h3>
+        </div>
+        <ul class="pf-cap-skills">
+          <li>Enterprise AI Transformation</li>
+          <li>Agentic AI</li>
+          <li>ML Workflow Automation</li>
+          <li>Intelligent Automation</li>
+          <li>Healthcare AI</li>
+          <li>NLP</li>
+          <li>Ambient AI</li>
+          <li>AI Product Strategy</li>
+        </ul>
+      </article>
+
+      <article class="pf-cap-row rev rev-d2">
+        <div class="pf-cap-lead">
+          <span class="pf-cap-num">03</span>
+          <h3 class="pf-cap-domain"><span class="gr">Leadership</span></h3>
+        </div>
+        <ul class="pf-cap-skills">
+          <li>Product Strategy</li>
+          <li>Global Delivery</li>
+          <li>Stakeholder Alignment</li>
+          <li>Cross-functional Teams</li>
+          <li>Vendor Governance</li>
+          <li>Digital Transformation</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══ VISION: AI TRANSFORMATION LEAD ═════════════════════ -->
+  <section class="pf-vision" id="vision" aria-label="Where I'm headed">
+    <div class="pf-sec-head rev">
+      <div class="pf-sec-eye">Where I'm Headed</div>
+      <h2 class="pf-sec-title">The next chapter: <span class="gr">AI Transformation leadership</span></h2>
+      <p class="pf-sec-sub">
+        My goal is to lead enterprise AI transformation across the pharmaceutical and healthcare
+        industry — translating frontier AI into compliant, audit-ready platforms that move real
+        clinical operations. Few people sit where domain depth, hands-on AI delivery and global
+        execution meet. I do.
+      </p>
+    </div>
+    <div class="pf-pillars">
+      <div class="pf-pillar rev">
+        <div class="pf-pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Regulated domain mastery</h3>
+        <p>18+ years inside GxP-governed clinical systems — CTMS, Veeva Vault, CSV/CSA, 21 CFR Part 11 and EU Annex 11. I know where AI can — and cannot — be deployed in regulated pharma.</p>
+      </div>
+      <div class="pf-pillar rev rev-d1">
+        <div class="pf-pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
+        <h3>Hands-on AI delivery</h3>
+        <p>I don't just sponsor AI — I prototype and ship it. Ambient documentation, agentic workflows, intelligent automation: from strategy deck to working product.</p>
+      </div>
+      <div class="pf-pillar rev rev-d2">
+        <div class="pf-pillar-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div>
+        <h3>Global, audit-ready execution</h3>
+        <p>Programs across 20+ countries and teams of 40+ — delivered on time, validated, and inspection-ready. Transformation that survives contact with regulators and operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate lightbox -->
+  <div class="pf-lightbox" id="pfLightbox" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+    <button type="button" class="pf-lb-close" id="pfLbClose" aria-label="Close certificate">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <figure>
+      <img id="pfLbImg" src="" alt="">
+      <figcaption id="pfLbCap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- ═══ CLOSE / CTA ════════════════════════════════════════ -->
+  <section class="pf-close pf-cine" aria-label="Get in touch">
+    <div class="pf-bg" data-parallax="0.14"></div>
+    <div class="pf-bg-tint"></div>
+    <div class="pf-close-inner rev">
+      <h2>Let's lead the <span class="gr">AI transformation</span> of healthcare — together.</h2>
+      <p>Open to AI Transformation leadership roles across pharmaceutical and healthcare organizations, and to advisory or build engagements through TinyAngle Studio.</p>
+      <div class="pf-close-actions">
+        <a href="https://wa.me/919665992188?text=Hi%20Rupesh%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20connect." target="_blank" rel="noopener" class="btn-primary" aria-label="Start a conversation on WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.876 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+          Start a conversation
+        </a>
+        <a href="files/Rupesh_Shinde_Resume_Healthcare_Executive.docx" download="Rupesh_Shinde_Resume.docx" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download résumé
+        </a>
+        <a href="https://www.linkedin.com/in/rupesh-shinde-r0102037s" target="_blank" rel="noopener" class="btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+      <p class="pf-close-note">Detailed résumé available on request · rupeshshinde07@gmail.com</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="foot-logo-row">
+        <img class="foot-logo" src="Images/TinyAngleStudio%20Logo.jpeg" alt="TinyAngle Studio" onerror="this.style.display='none'">
+        <span class="foot-nm">TinyAngle Studio</span>
+      </div>
+      <p class="foot-desc">AI product studio building healthcare and operational platforms — anchored in 18+ years inside enterprise healthcare.</p>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/rupesh-shinde-r0102037s" class="fsoc" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://instagram.com/tinyanglestudio" class="fsoc" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://github.com/tinyanglestudio-tech" class="fsoc" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="mailto:support@tinyanglestudio.com" class="fsoc" aria-label="Email">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Portfolio</h4>
+      <ul>
+        <li><a href="portfolio.html#novartis">Novartis</a></li>
+        <li><a href="portfolio.html#vision">AI Transformation Vision</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="team.html">Founder</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@tinyanglestudio.com">support@tinyanglestudio.com</a></li>
+        <li><a href="contact.html">Pune, India</a></li>
+        <li><a href="contact.html">Start a Project</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Small Angles. Big Impact. &copy; 2026 TinyAngle Studio</p>
+    <p>Made with care in Pune, India</p>
+  </div>
+</footer>
+
+<!-- ═══ PRINTABLE RÉSUMÉ — hidden on screen, rendered only when printing / saving to PDF ═══ -->
+<section id="resumeDoc" class="resume-doc" aria-hidden="true">
+  <header class="rz-head">
+    <h1 class="rz-name">Rupesh Shinde</h1>
+    <p class="rz-title">Enterprise Healthcare AI &amp; Digital Transformation Leader</p>
+    <p class="rz-contact">Pune, India · +91 96659 92188 · rupeshshinde07@gmail.com · linkedin.com/in/rupesh-shinde-r0102037s</p>
+  </header>
+
+  <section class="rz-sec">
+    <h2 class="rz-h2">Professional Summary</h2>
+    <p class="rz-summary">Enterprise Healthcare AI &amp; Digital Transformation leader with 18+ years across regulated pharmaceutical platforms, enterprise CTMS, GxP-governed clinical systems, and AI-enabled workflow transformation. Global CTMS System Owner and Clinical Platform Product Manager with hands-on delivery of Agentic AI, NLP, and ambient clinical documentation solutions. International onsite experience in the United States and Switzerland. Seeking to lead enterprise AI transformation in pharma and healthcare organizations.</p>
+  </section>
+
+  <section class="rz-sec">
+    <h2 class="rz-h2">Core Competencies</h2>
+    <p class="rz-comp-cat">Healthcare &amp; Clinical Systems</p>
+    <ul class="rz-comp-list">
+      <li>Enterprise CTMS · Veeva Vault · EDC · eTMF</li><li>GxP Compliance · CSV / CSA · 21 CFR Part 11</li><li>EU Annex 11 · ICH E6 GCP · Audit Readiness</li><li>HL7 · FHIR · Clinical Trial Phases I–III</li>
+    </ul>
+    <p class="rz-comp-cat">AI, Automation &amp; Engineering</p>
+    <ul class="rz-comp-list">
+      <li>Generative AI · Agentic AI · NLP · Ambient AI</li><li>LangChain · Python · OpenAI API · LlamaIndex</li><li>ML Workflow Automation · Intelligent Automation</li><li>AI Product Strategy · Healthcare AI</li>
+    </ul>
+    <p class="rz-comp-cat">Leadership &amp; Delivery</p>
+    <ul class="rz-comp-list">
+      <li>Product Strategy · Global Delivery · Vendor Governance</li><li>Stakeholder Alignment · Regulatory Risk Mitigation</li><li>Cross-functional Team Leadership (40+ members)</li><li>Digital Transformation · Budget Management</li>
+    </ul>
+  </section>
+
+  <section class="rz-sec">
+    <h2 class="rz-h2">Career Highlights</h2>
+    <ul class="rz-highlights">
+      <li><strong>18+ years</strong> across regulated pharmaceutical platforms and enterprise clinical systems.</li>
+      <li>Governed an enterprise CTMS platform across <strong>20+ countries</strong> at global scale.</li>
+      <li>Led cross-functional delivery teams of <strong>40+ members</strong> across 4 global regions.</li>
+      <li>Delivered <strong>15–25% operational efficiency gains</strong> via AI-enabled workflow automation.</li>
+      <li>Shipped <strong>5+ AI healthcare solutions</strong>; onsite experience in the US &amp; Switzerland.</li>
+      <li><strong>International Hackathon Finalist</strong> — presented clinical technology outcomes at Novartis Global HQ, Basel.</li>
+    </ul>
+  </section>
+
+  <section class="rz-sec">
+    <h2 class="rz-h2">Professional Experience</h2>
+
+    <div class="rz-job">
+      <div class="rz-job-head">
+        <span class="rz-job-role">Technology Product Manager / CTMS Lead — Novartis</span>
+        <span class="rz-job-dates">2022 – Present</span>
+      </div>
+      <div class="rz-job-meta">Pune, India</div>
+      <ul class="rz-bullets">
+        <li>Spearheaded enterprise CTMS product strategy and global platform roadmap across 20+ countries, driving clinical-operations modernization.</li>
+        <li>Orchestrated GxP-compliant delivery achieving 15–25% operational efficiency gains through AI-enabled workflow automation and Veeva Vault optimization.</li>
+        <li>Governed Computer System Validation (CSV, CSA) ensuring 21 CFR Part 11 and EU Annex 11 regulatory adherence; served as PQ business lead for platform releases.</li>
+        <li>Directed the global IMPACT CTMS to Veeva CTMS migration and led AI-driven SIGNAL automation and clinical documentation &amp; eTMF workflow transformation.</li>
+        <li>Managed audit-readiness across regulated clinical systems for Phase I–III trial operations.</li>
+      </ul>
+    </div>
+
+    <div class="rz-job">
+      <div class="rz-job-head">
+        <span class="rz-job-role">Senior Technology Lead / Product Specialist — Cognizant Technology Solutions</span>
+        <span class="rz-job-dates">2007 – 2021</span>
+      </div>
+      <div class="rz-job-meta">New Jersey, USA · Basel, Switzerland · India</div>
+      <ul class="rz-bullets">
+        <li>Directed healthcare technology transformation for Fortune 500 pharmaceutical enterprises across the US, Europe, and India.</li>
+        <li>Orchestrated enterprise CTMS implementations across 10+ simultaneous global programs for leading pharma organizations.</li>
+        <li>Led cross-functional delivery teams of 40+ members; governed CSV documentation, validation, and EDC administration; modernized clinical data workflows and ETL pipelines.</li>
+        <li>Managed budget governance and vendor relationships across multi-year global programs.</li>
+        <li>International Hackathon Finalist — presented clinical technology outcomes at Novartis Global HQ, Basel.</li>
+      </ul>
+    </div>
+
+    <div class="rz-job">
+      <div class="rz-job-head">
+        <span class="rz-job-role">Founder &amp; AI Product Lead — TinyAngle Studio</span>
+        <span class="rz-job-dates">2026 – Present</span>
+      </div>
+      <div class="rz-job-meta">Independent AI Innovation Lab · concurrent with Novartis · Pune, India</div>
+      <ul class="rz-bullets">
+        <li>Founded an independent AI innovation lab advancing healthcare workflow acceleration, clinical operational intelligence, and enterprise AI transformation.</li>
+        <li>Prototyped and shipped AI healthcare products: MediScribe (ambient clinical documentation) and ResQ (AI emergency coordination).</li>
+        <li>Delivered client digital-health platforms using LangChain, Python, OpenAI API, and agentic AI frameworks.</li>
+        <li>Developed and deployed Next.js-based client websites and AI-integrated operational platforms.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="rz-sec">
+    <h2 class="rz-h2">Certifications &amp; Professional Development</h2>
+    <ul class="rz-certs">
+      <li>AI Tools for Healthcare Professionals — IIT Kanpur, Techkriti 2026 (March 2026)</li>
+      <li>Agentic AI &amp; ML: Build an Autonomous Workflow — IIT Kanpur, Techkriti 2026 (March 2026)</li>
+      <li>Agentic AI: Build Autonomous AI Workflows — MIT-WPU, Pune (May 2026)</li>
+      <li>Claude AI Masterclass — MIT-WPU, Pune (May 2026)</li>
+      <li>Veeva Vault Platform Fundamentals — Veeva Training Services (June 2025)</li>
+      <li>Veeva Vault Platform Business Administrator — Veeva Training Services (June 2025)</li>
+      <li>Project Management Advanced Workshop — Educate 360 (April 2025)</li>
+      <li>Executive Presence Mastery Bootcamp — Excel360 (December 2025)</li>
+      <li>People Management Assessment — LearnTube.ai (December 2025)</li>
+      <li>Microsoft Excel Using AI — OfficeMaster (July 2025)</li>
+    </ul>
+    <p class="rz-edu" style="margin-top:6px;">Certified Product Owner (Clinical Systems) · ITIL Foundation · Six Sigma Green Belt · Oracle SQL</p>
+  </section>
+
+  <section class="rz-sec">
+    <h2 class="rz-h2">Education</h2>
+    <p class="rz-edu"><strong>Bachelor of Engineering (B.E.)</strong> — Shivaji University, India · Class of 2007</p>
+  </section>
+
+  <!-- Slim running footer — repeats on every printed page, identifies continuation pages -->
+  <div class="rz-footer" aria-hidden="true">Rupesh Shinde · Enterprise Healthcare AI &amp; Digital Transformation Leader · rupeshshinde07@gmail.com · +91 96659 92188</div>
+</section>
+
+<script src="js/main.js"></script>
+<script>
+/* ── Portfolio page motion: parallax + scroll progress ──
+   Vanilla, no dependencies. Scroll-reveal (.rev) and the nav / theme /
+   mobile-menu wiring are handled by the shared js/main.js. */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Scroll progress bar */
+  var bar = document.getElementById('pfProgress');
+  /* Parallax background layers */
+  var layers = Array.prototype.slice.call(document.querySelectorAll('.pf-bg[data-parallax]'));
+
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      var vh = window.innerHeight;
+      if (bar) {
+        var docH = document.documentElement.scrollHeight - vh;
+        bar.style.width = (docH > 0 ? (window.scrollY / docH) * 100 : 0) + '%';
+      }
+      if (!reduce) {
+        for (var i = 0; i < layers.length; i++) {
+          var el = layers[i];
+          var sec = el.parentElement;
+          var rect = sec.getBoundingClientRect();
+          if (rect.bottom < -200 || rect.top > vh + 200) continue;   /* offscreen — skip */
+          var speed = parseFloat(el.getAttribute('data-parallax')) || 0.15;
+          /* progress of section center relative to viewport center, -1..1 */
+          var prog = (rect.top + rect.height / 2 - vh / 2) / vh;
+          el.style.transform = 'translate3d(0,' + (prog * speed * vh).toFixed(1) + 'px,0)';
+        }
+      }
+      ticking = false;
+    });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  onScroll();
+
+  /* ── Certificate lightbox ──
+     Titles are shown by default; clicking a certificate opens its image. */
+  var lb = document.getElementById('pfLightbox');
+  if (lb) {
+    var lbImg = document.getElementById('pfLbImg');
+    var lbCap = document.getElementById('pfLbCap');
+    var lbClose = document.getElementById('pfLbClose');
+    var lastFocus = null;
+
+    function openCert(btn) {
+      var src = btn.getAttribute('data-cert');
+      if (!src) return;
+      var title = btn.getAttribute('data-cert-title') || '';
+      var sub = btn.getAttribute('data-cert-sub') || '';
+      lbImg.setAttribute('src', src);
+      lbImg.setAttribute('alt', title + ' certificate');
+      lbCap.innerHTML = title + (sub ? '<span>' + sub + '</span>' : '');
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      lastFocus = btn;
+      lbClose.focus();
+    }
+    function closeCert() {
+      lb.classList.remove('open');
+      lbImg.setAttribute('src', '');
+      document.body.style.overflow = '';
+      if (lastFocus) { lastFocus.focus(); lastFocus = null; }
+    }
+
+    var certBtns = document.querySelectorAll('button.pf-cert[data-cert]');
+    for (var c = 0; c < certBtns.length; c++) {
+      var b = certBtns[c];
+      /* upgrade the leading award icon into a clickable thumbnail preview */
+      var src = b.getAttribute('data-cert');
+      if (src && !b.querySelector('.pf-cert-thumb')) {
+        var thumb = document.createElement('img');
+        thumb.className = 'pf-cert-thumb';
+        thumb.src = src;
+        thumb.alt = '';
+        thumb.loading = 'lazy';
+        thumb.decoding = 'async';
+        var lead = b.querySelector('svg:not(.pf-cert-eye)');
+        if (lead) { lead.replaceWith(thumb); } else { b.insertBefore(thumb, b.firstChild); }
+      }
+      b.addEventListener('click', function () { openCert(this); });
+    }
+    lbClose.addEventListener('click', closeCert);
+    lb.addEventListener('click', function (e) { if (e.target === lb) closeCert(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lb.classList.contains('open')) closeCert();
+    });
+  }
+})();
+</script>
+</body>
+</html>
