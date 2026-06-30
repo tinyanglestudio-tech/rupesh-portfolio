@@ -20,6 +20,13 @@ const THEME_LABELS = {
   grid: 'Data Grid',
 }
 
+// Per-mode default shown on first visit: Particle Drift in dark, Data Grid in
+// light. Used unless the visitor has manually chosen a theme (bgfx-user-set).
+const isLight = () => document.documentElement.getAttribute('data-theme') === 'light'
+const defaultTheme = () => (isLight() ? 'grid' : 'drift')
+const userHasChosen = () => !!localStorage.getItem('bgfx-user-set')
+const resolveInitial = () => (userHasChosen() ? localStorage.getItem('bgfx-theme') || defaultTheme() : defaultTheme())
+
 // This site's "background" is per-section: full-bleed cinematic images
 // (.pf-bg, z-index:-2) over an opaque base, with a translucent legibility tint
 // (.pf-bg-tint) on top. All of that hides a z-index:-1 canvas. So, only while a
@@ -67,7 +74,7 @@ let applyTheme = null
 let pendingPick = null
 buildPicker(
   (name) => (applyTheme ? applyTheme(name) : (pendingPick = name)),
-  () => localStorage.getItem('bgfx-theme') || 'drift',
+  resolveInitial,
 )
 
 const canvas = document.getElementById('bgfx')
@@ -104,7 +111,7 @@ function boot(canvas) {
 
   let palette = readPalette()
   let current = null
-  let activeName = localStorage.getItem('bgfx-theme') || 'drift'
+  let activeName = resolveInitial()
   const pointer = { x: 0, y: 0 }
 
   function size() {
@@ -131,7 +138,14 @@ function boot(canvas) {
   // react to the site's own light/dark toggle (it flips data-theme on <html>)
   new MutationObserver(() => {
     const p = readPalette()
-    if (p.light !== palette.light) setTheme(activeName)
+    if (p.light === palette.light) return // not a mode change
+    palette = p
+    if (userHasChosen()) {
+      if (localStorage.getItem('bgfx-theme') === 'off') return // stay off
+      setTheme(activeName) // keep their pick, refresh palette for new mode
+    } else {
+      setTheme(defaultTheme()) // follow the new mode's default (drift/grid)
+    }
   }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] })
 
   addEventListener('resize', size)
@@ -393,6 +407,7 @@ function buildPicker(onPick, getActive) {
   mount.addEventListener('click', (e) => {
     const b = e.target.closest('button')
     if (!b) return
+    localStorage.setItem('bgfx-user-set', '1') // a manual pick now overrides the per-mode default
     if (b.dataset.t === 'off') {
       document.documentElement.classList.remove('bgfx-on') // restore original cinematic look
       if (canvas) canvas.style.display = 'none'
