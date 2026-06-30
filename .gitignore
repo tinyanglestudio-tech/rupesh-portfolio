@@ -4,3 +4,6 @@ node_modules/
 *.log
 
 .vercel
+
+# Experimental React/Three.js 3D portfolio prototype (kept local only)
+web3d/

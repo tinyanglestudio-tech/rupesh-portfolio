@@ -827,6 +827,9 @@
 </head>
 <body>
 
+<!-- Animated WebGL background (sits behind all content) -->
+<canvas id="bgfx" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block;"></canvas>
+
 <!-- Background -->
 <div class="bg-grid"></div>
 <div class="bg-glow"></div>
@@ -1298,6 +1301,7 @@
         <li><span>Pune, India</span></li>
       </ul>
     </div>
+    <div class="footer-col" id="bgfxFooter"></div>
   </div>
   <div class="footer-bottom">
     <p>&copy; 2026 Rupesh Shinde</p>
@@ -1516,5 +1520,6 @@
   }
 })();
 </script>
+<script type="module" src="js/bg-fx.js"></script>
 </body>
 </html>
