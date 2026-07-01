@@ -446,6 +446,13 @@
     .pf-proj-grid {
       display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
       max-width: 760px; margin-top: 30px;
+      /* Fill column-by-column so each column is its own ordered list:
+         left column = first 3 items, right column = last 2 items. */
+      grid-template-rows: repeat(3, auto); grid-auto-flow: column; align-content: start;
+    }
+    @media (max-width: 540px) {
+      /* Stack to a single column on small screens (DOM order). */
+      .pf-proj-grid { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; }
     }
     .pf-proj {
       display: block; padding: 22px; border-radius: var(--radius-sm);
@@ -461,6 +468,7 @@
     .pf-status.mvp  { color: #22d3ee; background: rgba(34,211,238,.12); border: 1px solid rgba(34,211,238,.3); }
     .pf-status.dev  { color: #fbbf24; background: rgba(251,191,36,.12); border: 1px solid rgba(251,191,36,.3); }
     .pf-status.poc  { color: #c084fc; background: rgba(192,132,252,.12); border: 1px solid rgba(192,132,252,.3); }
+    .pf-status.pilot { color: #fb923c; background: rgba(251,146,60,.12); border: 1px solid rgba(251,146,60,.3); }
     .pf-proj-desc { font-size: 13px; line-height: 1.5; color: var(--muted); }
 
     /* ═══ EXPERTISE + CERTS ───────────────────────────────────── */
@@ -743,6 +751,7 @@
     :root[data-theme="light"] .pf-status.mvp  { color: #0e7490; background: rgba(8,145,178,.12);  border-color: rgba(8,145,178,.34); }
     :root[data-theme="light"] .pf-status.dev  { color: #b45309; background: rgba(180,83,9,.12);   border-color: rgba(180,83,9,.30); }
     :root[data-theme="light"] .pf-status.poc  { color: #7c3aed; background: rgba(124,58,237,.10); border-color: rgba(124,58,237,.30); }
+    :root[data-theme="light"] .pf-status.pilot { color: #c2410c; background: rgba(194,65,12,.10); border-color: rgba(194,65,12,.30); }
     /* Glass cards/badges get a touch more opacity + a soft lift on white */
     :root[data-theme="light"] .pf-card { box-shadow: 0 24px 60px rgba(16,25,54,.13); }
     :root[data-theme="light"] .pf-portrait-frame {
@@ -1020,6 +1029,20 @@
             working product, not slideware.
           </p>
           <div class="pf-proj-grid">
+            <!-- Left column (top → bottom) -->
+            <div class="pf-proj">
+              <div class="pf-proj-top"><span class="pf-proj-name">Smiling Hearts</span><span class="pf-status live">Live</span></div>
+              <p class="pf-proj-desc">Healthcare web platform with a built-in compliance audit — privacy, consent &amp; medico-legal readiness.</p>
+            </div>
+            <div class="pf-proj">
+              <div class="pf-proj-top"><span class="pf-proj-name">Orthopedic Platform</span><span class="pf-status live">Live</span></div>
+              <p class="pf-proj-desc">Digital health platform — 40% new-patient growth, 4.9★ satisfaction.</p>
+            </div>
+            <div class="pf-proj">
+              <div class="pf-proj-top"><span class="pf-proj-name">Government SIR &amp; Enumeration Automation</span><span class="pf-status pilot">Pilot</span></div>
+              <p class="pf-proj-desc">QR-based citizen data capture with automated reviewer &amp; enumeration workflows.</p>
+            </div>
+            <!-- Right column (top → bottom) -->
             <div class="pf-proj">
               <div class="pf-proj-top"><span class="pf-proj-name">MediScribe</span><span class="pf-status mvp">MVP</span></div>
               <p class="pf-proj-desc">Ambient AI clinical documentation — SOAP notes, ICD-10 auto-coding &amp; EHR integration.</p>
@@ -1027,14 +1050,6 @@
             <div class="pf-proj">
               <div class="pf-proj-top"><span class="pf-proj-name">ResQ</span><span class="pf-status dev">In Dev</span></div>
               <p class="pf-proj-desc">AI emergency coordination — triage, smart routing &amp; offline-first critical care.</p>
-            </div>
-            <div class="pf-proj">
-              <div class="pf-proj-top"><span class="pf-proj-name">Orthopedic Platform</span><span class="pf-status live">Live</span></div>
-              <p class="pf-proj-desc">Digital health platform — 40% new-patient growth, 4.9★ satisfaction.</p>
-            </div>
-            <div class="pf-proj">
-              <div class="pf-proj-top"><span class="pf-proj-name">Citizen Data Automation</span><span class="pf-status poc">POC</span></div>
-              <p class="pf-proj-desc">QR-based citizen data capture with automated reviewer workflows.</p>
             </div>
           </div>
         </div>
@@ -1417,7 +1432,8 @@
       <li><strong>MediScribe</strong> — ambient AI clinical documentation: SOAP-note generation, ICD-10 auto-coding and EHR integration (MVP).</li>
       <li><strong>ResQ</strong> — AI emergency coordination: triage, smart routing and offline-first critical care (in development).</li>
       <li><strong>Digital health platform</strong> — built with agentic AI (LangChain, Python, OpenAI API); 40% new-patient growth, 4.9★ satisfaction (live).</li>
-      <li><strong>Citizen data automation</strong> — QR-based capture with automated reviewer workflows (proof of concept).</li>
+      <li><strong>Smiling Hearts</strong> — healthcare web platform with a built-in compliance audit (privacy, consent and medico-legal readiness) (live).</li>
+      <li><strong>Government SIR &amp; Enumeration Automation</strong> — QR-based citizen data capture with automated reviewer and enumeration workflows (pilot).</li>
     </ul>
   </section>
 
