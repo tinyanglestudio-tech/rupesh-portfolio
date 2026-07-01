@@ -77,14 +77,9 @@ buildPicker(
   resolveInitial,
 )
 
-const canvas = document.getElementById('bgfx')
-if (canvas) {
-  try {
-    boot(canvas)
-  } catch (err) {
-    console.error('[bg-fx] WebGL init failed:', err)
-  }
-}
+// NOTE: boot() is invoked at the very BOTTOM of this file, after BUILDERS is
+// defined — boot() → setTheme() references BUILDERS, so calling it here (before
+// the `const BUILDERS` line runs) would hit its temporal dead zone.
 
 function readPalette() {
   const cs = getComputedStyle(document.documentElement)
@@ -421,4 +416,14 @@ function buildPicker(onPick, getActive) {
   })
 
   if (getActive) mark(getActive())
+}
+
+// ─── Kick off the renderer (after BUILDERS is initialised above) ───
+const canvas = document.getElementById('bgfx')
+if (canvas) {
+  try {
+    boot(canvas)
+  } catch (err) {
+    console.error('[bg-fx] WebGL init failed:', err)
+  }
 }
